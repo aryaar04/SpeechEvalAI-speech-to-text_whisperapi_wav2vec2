@@ -1,0 +1,7 @@
+torch
+transformers
+pandas
+librosa
+soundfile
+jiwer
+openai

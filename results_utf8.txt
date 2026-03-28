@@ -1,0 +1,82 @@
+﻿Parsing dataset folders...
+Found 10263 total audio samples.
+Limiting evaluation to 20 samples so it finishes quickly! Change this in the script if you want a full evaluation.
+
+Loading Wav2Vec2 model: facebook/wav2vec2-base-960h
+
+Transcribing with Wav2Vec2...
+[1/20] W2V2 processing... (Prediction: once upon a time there was a f...)
+[2/20] W2V2 processing... (Prediction: the door was very devoted to h...)
+[3/20] W2V2 processing... (Prediction: one day the stag was caught in...)
+[4/20] W2V2 processing... (Prediction: all the friends of the stag le...)
+[5/20] W2V2 processing... (Prediction: but the door remained steadfas...)
+[6/20] W2V2 processing... (Prediction: she was very devoted to her hu...)
+[7/20] W2V2 processing... (Prediction: as soon as the hunter came she...)
+[8/20] W2V2 processing... (Prediction: kill me first and then my husb...)
+[9/20] W2V2 processing... (Prediction: the hunter was so amazed and s...)
+[10/20] W2V2 processing... (Prediction: in that split of second the st...)
+[11/20] W2V2 processing... (Prediction: the moral of the story with gr...)
+[12/20] W2V2 processing... (Prediction: once upon a time there was a f...)
+[13/20] W2V2 processing... (Prediction: the cooks of the kitchen used ...)
+[14/20] W2V2 processing... (Prediction: she liked the place and her li...)
+[15/20] W2V2 processing... (Prediction: one day a crow saw the pigeon ...)
+[16/20] W2V2 processing... (Prediction: then one day that crow made fr...)
+[17/20] W2V2 processing... (Prediction: under the protext of friendshi...)
+[18/20] W2V2 processing... (Prediction: the pigeon then told her that ...)
+[19/20] W2V2 processing... (Prediction: so she suggested the crow to s...)
+[20/20] W2V2 processing... (Prediction: but the crow was impatient and...)
+
+Transcribing with Whisper API...
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00001.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[1/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00002.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[2/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00003.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[3/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00004.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[4/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00005.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[5/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00006.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[6/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00007.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[7/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00008.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[8/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00009.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[9/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00010.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[10/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00011.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[11/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00012.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[12/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00013.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[13/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00014.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[14/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00015.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[15/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00016.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[16/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00017.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[17/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00018.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[18/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00019.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[19/20] Whisper API processing... (Prediction: ...)
+Whisper API Error on malyalam_female_english\wav\train_malayalamfemale_00020.wav: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[20/20] Whisper API processing... (Prediction: ...)
+
+==================================================
+                EVALUATION REPORT
+==================================================
+
+[Wav2Vec2 Results]
+Word-level accuracy: 96.65%
+Character-level accuracy: 98.48% (derived from CER = 1.52%)
+
+[Whisper API Results]
+Word-level accuracy: 0.00%
+Character-level accuracy: 0.00% (derived from CER = 100.00%)
+==================================================

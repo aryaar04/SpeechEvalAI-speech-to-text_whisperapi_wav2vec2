@@ -1,158 +1,49 @@
-# 🎙️ SpeechEvalAI: Whisper vs Wav2Vec2 Comparison
+# Speech to Text Word-Level & Character-Level Accuracy Evaluator
 
-## 📌 Overview
+This project evaluates the performance of Wav2Vec2 and Whisper models on an Indic TTS English dataset. It provides **Word-Level Accuracy** and **Character-Level Accuracy** metrics, similar to the CNN LSTM evaluation format you used before.
 
-SpeechEvalAI is a benchmarking project that evaluates and compares two leading Speech-to-Text (STT) models:
+## Prerequisites
 
-* **Whisper (openai/whisper-base - local model)**
-* **Wav2Vec2 (facebook/wav2vec2-base-960h)**
+1. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-The project measures transcription performance on an Indic TTS dataset using standard evaluation metrics such as Word Error Rate (WER) and Character Error Rate (CER).
+2. **Prepare your dataset**:
+   You must create a file named `dataset.csv` in this folder with your dataset metadata. It should have the following two columns:
+   - `audio_path`: The relative or absolute path to the audio file (e.g., `.wav`, `.mp3`).
+   - `transcript`: The ground truth English text (what was actually spoken).
 
----
+   *Example `dataset.csv`:*
+   ```csv
+   audio_path,transcript
+   audio/sample1.wav,this is a test sentence
+   audio/sample2.wav,the weather is nice today
+   ```
 
-## 🚀 Features
+3. **(Optional) OpenAI API Key**:
+   If you want to evaluate using the paid **Whisper API** (which is usually much faster and more accurate than running locally), open `evaluate_models.py` and replace:
+   ```python
+   OPENAI_API_KEY = "your_openai_api_key_here"
+   ```
+   with your actual OpenAI API key. If you leave it as-is, the script will skip the Whisper API step but still run the **local Open-Source Whisper** and **Wav2Vec2** models.
 
-* 📊 Comparative analysis of Whisper and Wav2Vec2
-* 🧠 Fine-tuned evaluation on Indic TTS dataset
-* 📉 Metrics: Word Accuracy, Character Accuracy, WER, CER
-* 📁 Custom dataset pipeline support
-* ⚙️ Modular evaluation framework
+## How to Run
 
----
-
-## 🛠️ Tech Stack
-
-* Python
-* Hugging Face Transformers (Wav2Vec2, Whisper local model)
-* OpenAI Whisper (API initially intended)
-* Pandas, NumPy
-* Librosa / SoundFile
-
----
-
-## 📂 Project Structure
-
-```
-SpeechEvalAI/
-│── dataset/
-│   ├── audio_files/
-│   ├── dataset.csv
-│
-│── models/
-│   ├── whisper_model.py
-│   ├── wav2vec2_model.py
-│
-│── evaluation/
-│   ├── metrics.py
-│   ├── evaluate_models.py
-│
-│── results/
-│   ├── output.csv
-│   ├── comparison_report.txt
-│
-│── README.md
-│── requirements.txt
-```
-
----
-
-## 📊 Dataset Format
-
-The dataset CSV must contain:
-
-| audio_path        | transcript        |
-| ----------------- | ----------------- |
-| path/to/audio.wav | ground truth text |
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/yourusername/SpeechEvalAI.git
-cd SpeechEvalAI
-pip install -r requirements.txt
-```
-
----
-
-## 🔑 Setup
-
-### Whisper Model Note
-
-* Initially designed to use **Whisper API**
-* Due to API quota limitations, evaluation was performed using:
-
-  * **Local model: openai/whisper-base**
-
-No API key is required for the current setup.
-
----
-
-## ▶️ Usage
-
-Run the evaluation:
-
+Execute the script from your terminal:
 ```bash
 python evaluate_models.py
 ```
 
----
+## How It Works
 
-## 📈 Evaluation Metrics
+It uses the `jiwer` package to calculate Word Error Rate (WER) and Character Error Rate (CER).
+- **Word-level accuracy** = `100 - (WER * 100)`
+- **Character-level accuracy** = `100 - (CER * 100)`
 
-* Word Accuracy
-* Character Accuracy
-* Word Error Rate (WER)
-* Character Error Rate (CER)
+By default, the script compares:
+1. **Wav2Vec2 Base 960h** (`facebook/wav2vec2-base-960h`)
+2. **Whisper Base (Local/Open Source)** (`openai/whisper-base`)
+3. **Whisper API (Cloud)** (`whisper-1` via OpenAI)
 
----
-
-## 📊 Final Results (Indic TTS Dataset)
-
-### 🔹 Wav2Vec2 (facebook/wav2vec2-base-960h)
-
-* **Word Accuracy:** 96.65%
-* **Character Accuracy:** 98.48%
-* **CER:** 1.52%
-
----
-
-### 🔹 Whisper (openai/whisper-base - Local Model)
-
-* **Word Accuracy:** 98.48%
-* **Character Accuracy:** 99.37%
-
----
-
-## 🔍 Key Insights
-
-* Whisper significantly outperforms Wav2Vec2 in both word-level and character-level accuracy
-* Whisper demonstrates better robustness for Indic speech and pronunciation variations
-* Wav2Vec2 performs well but is comparatively more sensitive to dataset characteristics
-* Local Whisper model provides high accuracy without API dependency
-
----
-
-## 📌 Conclusion
-
-The experiment demonstrates that **Whisper (base model)** is more effective than **Wav2Vec2** for speech recognition tasks on Indic datasets, particularly in terms of transcription accuracy and reliability.
-
----
-
-## 🤝 Contribution
-
-Contributions are welcome! Feel free to fork the repository and submit pull requests.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👤 Author
-
-Arya A R
+If you have a fine-tuned Wav2Vec2 model for Indian English, you can change the `WAV2VEC2_MODEL_ID` at the top of the script!
